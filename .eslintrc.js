@@ -2,9 +2,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
   root: true,
-  globals: {
-    module: "readonly",
-  },
   env: { browser: true, es2022: true, es2021: true, node: true },
   extends: [
     "expo",

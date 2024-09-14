@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "expo-router";
-import { StatusBar, setStatusBarHidden } from "expo-status-bar";
+import { StatusBar } from "expo-status-bar";
 import { View, Text } from "react-native";
 
 export default function App() {
