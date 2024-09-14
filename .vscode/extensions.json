@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint", // ESLint extension
+    "esbenp.prettier-vscode", // Prettier extension
+    "gruntfuggly.todo-tree", // ToDo Tree
+    "wix.vscode-import-cost",
+    "dsznajder.es7-react-js-snippets"
+  ]
+}
