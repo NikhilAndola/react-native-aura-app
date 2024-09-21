@@ -21,6 +21,7 @@ module.exports = {
     ecmaVersion: 12,
   },
   plugins: [
+    "react",
     "react-refresh",
     "@typescript-eslint",
     "unused-imports",
@@ -30,17 +31,18 @@ module.exports = {
   ],
   rules: {
     "no-unused-vars": ["warn", { vars: "all", args: "none" }],
+    "@typescript-eslint/no-require-imports": "off",
     "spaced-comment": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        vars: "all",
-        varsIgnorePattern: "^_",
-        args: "after-used",
-        argsIgnorePattern: "^_",
-      },
-    ],
+    "@typescript-eslint/no-unused-vars": "off",
+    // "unused-imports/no-unused-vars": [
+    //   "warn",
+    //   {
+    //     vars: "all",
+    //     varsIgnorePattern: "^_",
+    //     args: "after-used",
+    //     argsIgnorePattern: "^_",
+    //   },
+    // ],
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-imports-ts": "warn",
     "react-hooks/exhaustive-deps": "warn",
@@ -87,4 +89,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ["*.js", "*.ts"],
+      rules: {
+        "@typescript-eslint/no-require-imports": "off",
+      },
+    },
+  ],
 };

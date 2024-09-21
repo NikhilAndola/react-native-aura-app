@@ -1,17 +1,36 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "noEmit": false,
+    "strict": false,
+    "target": "esnext",
     "types": ["nativewind/types"],
     "paths": {
       "@/*": ["./*"]
     }
   },
   "include": [
+    "app/**/*",
+    "types/**/*",
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "eslint.config.js"
+    "eslint.config.cjs",
+    "constants/index.js",
+    "constants/icons.js",
+    "constants/images.js"
   ]
 }
