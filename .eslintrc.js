@@ -32,6 +32,7 @@ module.exports = {
   rules: {
     "no-unused-vars": ["warn", { vars: "all", args: "none" }],
     "@typescript-eslint/no-require-imports": "off",
+    "react-hooks/exhaustive-deps": "warn",
     "spaced-comment": "off",
     "@typescript-eslint/no-unused-vars": "off",
     // "unused-imports/no-unused-vars": [
@@ -45,7 +46,6 @@ module.exports = {
     // ],
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-imports-ts": "warn",
-    "react-hooks/exhaustive-deps": "warn",
     "no-empty": "off",
     "@typescript-eslint/rule-name": "off",
     "react/react-in-jsx-scope": "off",

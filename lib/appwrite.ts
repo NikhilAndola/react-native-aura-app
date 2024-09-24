@@ -107,3 +107,32 @@ export const getCurrentUser = async () => {
     console.log(error);
   }
 };
+
+export async function getAllPosts() {
+  try {
+    const posts = await databases.listDocuments(
+      config?.databaseId,
+      config?.videoCollectionId
+    );
+
+    return posts?.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+export async function getLatestPosts() {
+  // const queries = [Query.orderAsc("$createdAt"), Query.limit(25)];
+  try {
+    const posts = await databases.listDocuments(
+      config?.databaseId,
+      config?.videoCollectionId,
+      // queries
+      [Query.orderDesc("$createdAt"), Query.limit(7)]
+    );
+
+    return posts?.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}

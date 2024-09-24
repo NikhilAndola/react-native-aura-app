@@ -40,8 +40,6 @@ const SignIn = () => {
     }
   }, []);
 
-  console.log("🚀 ~ SignIn ~ form:", form);
-
   return (
     <SafeAreaView className="bg-primary h-full ">
       <ScrollView>
